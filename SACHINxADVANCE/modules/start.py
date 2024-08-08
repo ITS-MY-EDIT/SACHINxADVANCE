@@ -1,1 +1,58 @@
+## Copy Paster Must Give Credit...
+## @JARVIS_V2
 
+from telethon import __version__, events, Button
+from config import SACHIN0, SACHIN1, SACHIN2, SACHIN3, SACHIN4, SACHIN5, SACHIN6, SACHIN7, SACHIN8, SACHIN9
+
+# Constants
+START_BUTTON = [
+    [Button.inline("• ᴄᴏᴍᴍᴀɴᴅs •", data="help_back")],
+    [
+        Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/JARVIS_V_SUPPORT"),
+        Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/Dora_Hub")
+    ],
+    [Button.url("• ʀᴇᴘᴏ •", "https://github.com/doraemon890/SOLO-X-SPAM")]
+]
+
+IMAGE_URL = "https://github.com/doraemon890/JARVIS-X-SPAM/assets/155803358/f30a5777-9823-45d0-9860-342eceadb774"
+PYTHON_VERSION = "3.11.3"
+JARVIS_VERSION = "M 1.8.31"
+
+async def get_bot_info(event):
+    ANNIE = await event.client.get_me()
+    bot_name = ANNIE.first_name
+    bot_id = ANNIE.id
+    return bot_name, bot_id
+
+def create_start_text(bot_name, bot_id, sender_name, sender_id):
+    return (
+        f"**ʜᴇʏ​ [{sender_name}](tg://user?id={sender_id}),\n\n"
+        f"ɪ ᴀᴍ [{bot_name}](tg://user?id={bot_id})​**\n"
+        "━━━━━━━━━━━━━━━━━━━\n\n"
+        f"» **ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ​ : [JARVIS](https://t.me/JARVIS_V2)**\n\n"
+        f"» **ᴊᴀʀᴠɪs V2 :** `{JARVIS_VERSION}`\n"
+        f"» **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{PYTHON_VERSION}`\n"
+        f"» **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{__version__}`\n"
+        "━━━━━━━━━━━━━━━━━"
+    )
+
+@SACHIN0.on(events.NewMessage(pattern="/start"))
+@SACHIN1.on(events.NewMessage(pattern="/start"))
+@SACHIN2.on(events.NewMessage(pattern="/start"))
+@SACHIN3.on(events.NewMessage(pattern="/start"))
+@SACHIN4.on(events.NewMessage(pattern="/start"))
+@SACHIN5.on(events.NewMessage(pattern="/start"))
+@SACHIN6.on(events.NewMessage(pattern="/start"))
+@SACHIN7.on(events.NewMessage(pattern="/start"))
+@SACHIN8.on(events.NewMessage(pattern="/start"))
+@SACHIN9.on(events.NewMessage(pattern="/start"))
+async def start(event):              
+    if event.is_private:
+        bot_name, bot_id = await get_bot_info(event)
+        start_text = create_start_text(bot_name, bot_id, event.sender.first_name, event.sender.id)
+        await event.client.send_file(
+            event.chat_id,
+            IMAGE_URL,
+            caption=start_text,
+            buttons=START_BUTTON
+        )
