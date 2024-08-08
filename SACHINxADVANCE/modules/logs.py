@@ -174,9 +174,27 @@ async def broadcast(event):
         for user in users:
             try:
                 if reply:
-                    await X1.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN0.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN1.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN2.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN3.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN4.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN5.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN6.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN7.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN8.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN9.send_message(user['id'], message or reply.text, file=reply.media)
                 else:
-                    await X1.send_message(user['id'], message)
+                    await SACHIN0.send_message(user['id'], message)
+                    await SACHIN1.send_message(user['id'], message)
+                    await SACHIN2.send_message(user['id'], message)
+                    await SACHIN3.send_message(user['id'], message)
+                    await SACHIN4.send_message(user['id'], message)
+                    await SACHIN5.send_message(user['id'], message)
+                    await SACHIN6.send_message(user['id'], message)
+                    await SACHIN7.send_message(user['id'], message)
+                    await SACHIN8.send_message(user['id'], message)
+                    await SACHIN9.send_message(user['id'], message)
                 user_count += 1
             except ForbiddenError:
                 pass  # Ignore if the bot is blocked
@@ -186,9 +204,27 @@ async def broadcast(event):
         for group in groups:
             try:
                 if reply:
-                    await X1.send_message(group['id'], message or reply.text, file=reply.media)
+                    await SACHIN0.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN1.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN2.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN3.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN4.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN5.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN6.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN7.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN8.send_message(user['id'], message or reply.text, file=reply.media)
+                    await SACHIN9.send_message(user['id'], message or reply.text, file=reply.media)
                 else:
-                    await X1.send_message(group['id'], message)
+                    await SACHIN0.send_message(user['id'], message)
+                    await SACHIN1.send_message(user['id'], message)
+                    await SACHIN2.send_message(user['id'], message)
+                    await SACHIN3.send_message(user['id'], message)
+                    await SACHIN4.send_message(user['id'], message)
+                    await SACHIN5.send_message(user['id'], message)
+                    await SACHIN6.send_message(user['id'], message)
+                    await SACHIN7.send_message(user['id'], message)
+                    await SACHIN8.send_message(user['id'], message)
+                    await SACHIN9.send_message(user['id'], message)
                 group_count += 1
             except ForbiddenError:
                 pass  # Ignore if the bot is removed from the group
