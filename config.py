@@ -17,7 +17,7 @@ API_HASH = "312d861b78efcd1b02183b2ab52a83a4"
 CMD_HNDLR = getenv("CMD_HNDLR", default=".")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
-
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://SachinSanatani:SACHINxSANATANI@sanatani.bnmsfbd.mongodb.net/?retryWrites=true&w=majority&appName=Sanatani")
 BOT_TOKEN0 = getenv("BOT_TOKEN0", default="6761879056:AAHkWE1f8gfrI3cPKGKK5cC2YM_BC6vHDzA")
 BOT_TOKEN1 = getenv("BOT_TOKEN1", default="7411670289:AAFmfvCFTdHh8e3lseciDtwPIS7d52CcBuM")
 BOT_TOKEN2 = getenv("BOT_TOKEN2", default="6828317510:AAHjnL2RVxJcLNS9uiMrxNSxiJ_F4bH4CbU")
