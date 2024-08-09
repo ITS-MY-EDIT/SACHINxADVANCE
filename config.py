@@ -11,7 +11,7 @@ from SACHINxADVANCE.data import SACHIN
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s', level=logging.WARNING)
 
 
-# VALUES REQUIRED FOR XBOTS
+# VALUES REQUIRED FOR SANATANI BOTS
 API_ID = 18136872
 API_HASH = "312d861b78efcd1b02183b2ab52a83a4"
 CMD_HNDLR = getenv("CMD_HNDLR", default=".")
