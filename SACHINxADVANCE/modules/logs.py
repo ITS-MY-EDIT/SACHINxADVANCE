@@ -13,7 +13,7 @@ db = client['bot_database']
 stats_collection = db['stats']
 
 # Heroku logs URL
-AYU = "https://graph.org/file/3a93e14b4e1c6c1d031e7.mp4"
+AYU = "https://telegra.ph/file/b6cfab255fabdaabaa89c.jpg"
 
 async def fetch_heroku_logs(ANNIE):
     if HEROKU_APP_NAME is None or HEROKU_API_KEY is None:
@@ -30,12 +30,12 @@ async def fetch_heroku_logs(ANNIE):
     return app.get_log()
 
 async def write_logs_to_file(logs):
-    with open("SACHINxADVANCElogs.txt", "w") as logfile:
-        logfile.write("𖤍 ᴊᴀʀᴠɪs 𖤍 [ ʙᴏᴛ ʟᴏɢs ]\n\n" + logs)
+    with open("SACHINxADVANCExSPAMlogs.txt", "w") as logfile:
+        logfile.write("❖ | sᴀɴᴀᴛᴀɴɪ ꭙ ʙᴏᴛ | ❖\n\n" + logs)
 
 async def send_logs_file(ANNIE, ms):
     try:
-        await X1.send_file(ANNIE.chat_id, "SACHINxADVANCElogs.txt", caption=f"𝗝𝗔𝗥𝗩𝗜𝗦 𝗕𝗢𝗧𝗦 𝗟𝗢𝗚𝗦 📨\n\n  » **Time Taken:** `{ms} seconds`")
+        await X1.send_file(ANNIE.chat_id, "SACHINxADVANCExSPAMlogs.txt", caption=f"𝗝𝗔𝗥𝗩𝗜𝗦 𝗕𝗢𝗧𝗦 𝗟𝗢𝗚𝗦 📨\n\n  » **Time Taken:** `{ms} seconds`")
     except Exception as e:
         await ANNIE.reply(f"An Exception Occurred!\n\n**ERROR:** {str(e)}")
 
@@ -63,7 +63,7 @@ async def logs(ANNIE):
             await send_logs_file(ANNIE, ms)
             await fetch.delete()
     elif ANNIE.sender_id in SUDO_USERS:
-        await ANNIE.reply("**»** ᴏɴʟʏ ᴊᴀʀᴠɪs ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ...")
+        await ANNIE.reply("**»** ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ...")
 
 @SACHIN0.on(events.NewMessage(incoming=True))
 @SACHIN1.on(events.NewMessage(incoming=True))
@@ -105,7 +105,7 @@ async def check_stats(event):
     if event.sender_id == OWNER_ID or event.sender_id in SUDO_USERS:
         user_count = stats_collection.count_documents({'type': 'user'})
         group_count = stats_collection.count_documents({'type': 'group'})
-        stats_message = f"⚔️ 𝗝𝗔𝗥𝗩𝗜𝗦 𝗦𝗢𝗟𝗢 𝗦𝗧𝗔𝗧𝗦 ⚔️"
+        stats_message = f"**───────────────────────**\n**ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ˹sᴀɴᴀᴛᴀɴɪ˼ ʙᴏᴛ sᴛᴀᴛᴜs**\n**───────────────────────**\n**    ❖ │ ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs │❖**\n**───────────────────────**"
         
         await event.reply(stats_message, file=AYU, buttons=[
             [Button.inline("ᴜsᴇʀs", data="user_stats"), Button.inline("ᴄʜᴀᴛs", data="group_stats")],
@@ -144,18 +144,20 @@ async def callback(event):
             [Button.inline("ᴜsᴇʀs", data="user_stats"), Button.inline("ᴄʜᴀᴛs", data="group_stats")],
             [Button.inline("ᴏᴠᴇʀᴀʟʟ", data="overall_stats")]
         ]
-        await event.edit("⚔️ 𝗝𝗔𝗥𝗩𝗜𝗦 𝗦𝗢𝗟𝗢 𝗦𝗧𝗔𝗧𝗦 ⚔️", file=AYU, buttons=buttons)
+        await event.edit("**───────────────────────**\n**ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ˹sᴀɴᴀᴛᴀɴɪ˼ ʙᴏᴛ sᴛᴀᴛᴜs**\n**───────────────────────**\n**    ❖ │ ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs │❖**\n**───────────────────────**", file=AYU, buttons=buttons)
 
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 @SACHIN0.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
-@SACHIN1.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
-@SACHIN2.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
-@SACHIN3.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
-@SACHIN4.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
-@SACHIN5.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
-@SACHIN6.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
-@SACHIN7.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
-@SACHIN8.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
-@SACHIN9.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
 async def broadcast(event):
     if event.sender_id == OWNER_ID:
         reply = await event.get_reply_message()
@@ -175,26 +177,8 @@ async def broadcast(event):
             try:
                 if reply:
                     await SACHIN0.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN1.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN2.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN3.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN4.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN5.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN6.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN7.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN8.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN9.send_message(user['id'], message or reply.text, file=reply.media)
                 else:
                     await SACHIN0.send_message(user['id'], message)
-                    await SACHIN1.send_message(user['id'], message)
-                    await SACHIN2.send_message(user['id'], message)
-                    await SACHIN3.send_message(user['id'], message)
-                    await SACHIN4.send_message(user['id'], message)
-                    await SACHIN5.send_message(user['id'], message)
-                    await SACHIN6.send_message(user['id'], message)
-                    await SACHIN7.send_message(user['id'], message)
-                    await SACHIN8.send_message(user['id'], message)
-                    await SACHIN9.send_message(user['id'], message)
                 user_count += 1
             except ForbiddenError:
                 pass  # Ignore if the bot is blocked
@@ -205,25 +189,421 @@ async def broadcast(event):
             try:
                 if reply:
                     await SACHIN0.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN1.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN2.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN3.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN4.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN5.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN6.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN7.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN8.send_message(user['id'], message or reply.text, file=reply.media)
-                    await SACHIN9.send_message(user['id'], message or reply.text, file=reply.media)
                 else:
                     await SACHIN0.send_message(user['id'], message)
+                group_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is removed from the group
+            except Exception as e:
+                print(f"Error sending message to {group['id']}: {str(e)}")
+        
+        await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
+    else:
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
+@SACHIN1.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
+async def broadcast(event):
+    if event.sender_id == OWNER_ID:
+        reply = await event.get_reply_message()
+        message = event.pattern_match.group(1)
+
+        if not message and not reply:
+            await event.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ.")
+            return
+        
+        users = stats_collection.find({'type': 'user'})
+        groups = stats_collection.find({'type': 'group'})
+
+        user_count = 0
+        group_count = 0
+
+        for user in users:
+            try:
+                if reply:
+                    await SACHIN1.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
                     await SACHIN1.send_message(user['id'], message)
+                user_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is blocked
+            except Exception as e:
+                print(f"Error sending message to {user['id']}: {str(e)}")
+        
+        for group in groups:
+            try:
+                if reply:
+                    await SACHIN1.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
+                    await SACHIN1.send_message(user['id'], message)
+                group_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is removed from the group
+            except Exception as e:
+                print(f"Error sending message to {group['id']}: {str(e)}")
+        
+        await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
+    else:
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
+@SACHIN2.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
+async def broadcast(event):
+    if event.sender_id == OWNER_ID:
+        reply = await event.get_reply_message()
+        message = event.pattern_match.group(1)
+
+        if not message and not reply:
+            await event.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ.")
+            return
+        
+        users = stats_collection.find({'type': 'user'})
+        groups = stats_collection.find({'type': 'group'})
+
+        user_count = 0
+        group_count = 0
+
+        for user in users:
+            try:
+                if reply:
+                    await SACHIN2.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
                     await SACHIN2.send_message(user['id'], message)
+                user_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is blocked
+            except Exception as e:
+                print(f"Error sending message to {user['id']}: {str(e)}")
+        
+        for group in groups:
+            try:
+                if reply:
+                    await SACHIN2.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
+                    await SACHIN2.send_message(user['id'], message)
+                group_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is removed from the group
+            except Exception as e:
+                print(f"Error sending message to {group['id']}: {str(e)}")
+        
+        await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
+    else:
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
+@SACHIN3.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
+async def broadcast(event):
+    if event.sender_id == OWNER_ID:
+        reply = await event.get_reply_message()
+        message = event.pattern_match.group(1)
+
+        if not message and not reply:
+            await event.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ.")
+            return
+        
+        users = stats_collection.find({'type': 'user'})
+        groups = stats_collection.find({'type': 'group'})
+
+        user_count = 0
+        group_count = 0
+
+        for user in users:
+            try:
+                if reply:
+                    await SACHIN3.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
                     await SACHIN3.send_message(user['id'], message)
+                user_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is blocked
+            except Exception as e:
+                print(f"Error sending message to {user['id']}: {str(e)}")
+        
+        for group in groups:
+            try:
+                if reply:
+                    await SACHIN3.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
+                    await SACHIN3.send_message(user['id'], message)
+                group_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is removed from the group
+            except Exception as e:
+                print(f"Error sending message to {group['id']}: {str(e)}")
+        
+        await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
+    else:
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
+@SACHIN4.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
+async def broadcast(event):
+    if event.sender_id == OWNER_ID:
+        reply = await event.get_reply_message()
+        message = event.pattern_match.group(1)
+
+        if not message and not reply:
+            await event.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ.")
+            return
+        
+        users = stats_collection.find({'type': 'user'})
+        groups = stats_collection.find({'type': 'group'})
+
+        user_count = 0
+        group_count = 0
+
+        for user in users:
+            try:
+                if reply:
+                    await SACHIN4.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
                     await SACHIN4.send_message(user['id'], message)
+                user_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is blocked
+            except Exception as e:
+                print(f"Error sending message to {user['id']}: {str(e)}")
+        
+        for group in groups:
+            try:
+                if reply:
+                    await SACHIN4.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
+                    await SACHIN4.send_message(user['id'], message)
+                group_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is removed from the group
+            except Exception as e:
+                print(f"Error sending message to {group['id']}: {str(e)}")
+        
+        await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
+    else:
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
+@SACHIN5.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
+async def broadcast(event):
+    if event.sender_id == OWNER_ID:
+        reply = await event.get_reply_message()
+        message = event.pattern_match.group(1)
+
+        if not message and not reply:
+            await event.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ.")
+            return
+        
+        users = stats_collection.find({'type': 'user'})
+        groups = stats_collection.find({'type': 'group'})
+
+        user_count = 0
+        group_count = 0
+
+        for user in users:
+            try:
+                if reply:
+                    await SACHIN5.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
                     await SACHIN5.send_message(user['id'], message)
+                user_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is blocked
+            except Exception as e:
+                print(f"Error sending message to {user['id']}: {str(e)}")
+        
+        for group in groups:
+            try:
+                if reply:
+                    await SACHIN5.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
+                    await SACHIN5.send_message(user['id'], message)
+                group_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is removed from the group
+            except Exception as e:
+                print(f"Error sending message to {group['id']}: {str(e)}")
+        
+        await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
+    else:
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
+@SACHIN6.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
+async def broadcast(event):
+    if event.sender_id == OWNER_ID:
+        reply = await event.get_reply_message()
+        message = event.pattern_match.group(1)
+
+        if not message and not reply:
+            await event.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ.")
+            return
+        
+        users = stats_collection.find({'type': 'user'})
+        groups = stats_collection.find({'type': 'group'})
+
+        user_count = 0
+        group_count = 0
+
+        for user in users:
+            try:
+                if reply:
+                    await SACHIN6.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
                     await SACHIN6.send_message(user['id'], message)
+                user_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is blocked
+            except Exception as e:
+                print(f"Error sending message to {user['id']}: {str(e)}")
+        
+        for group in groups:
+            try:
+                if reply:
+                    await SACHIN6.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
+                    await SACHIN6.send_message(user['id'], message)
+                group_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is removed from the group
+            except Exception as e:
+                print(f"Error sending message to {group['id']}: {str(e)}")
+        
+        await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
+    else:
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
+@SACHIN7.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
+async def broadcast(event):
+    if event.sender_id == OWNER_ID:
+        reply = await event.get_reply_message()
+        message = event.pattern_match.group(1)
+
+        if not message and not reply:
+            await event.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ.")
+            return
+        
+        users = stats_collection.find({'type': 'user'})
+        groups = stats_collection.find({'type': 'group'})
+
+        user_count = 0
+        group_count = 0
+
+        for user in users:
+            try:
+                if reply:
+                    await SACHIN7.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
                     await SACHIN7.send_message(user['id'], message)
+                user_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is blocked
+            except Exception as e:
+                print(f"Error sending message to {user['id']}: {str(e)}")
+        
+        for group in groups:
+            try:
+                if reply:
+                    await SACHIN7.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
+                    await SACHIN7.send_message(user['id'], message)
+                group_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is removed from the group
+            except Exception as e:
+                print(f"Error sending message to {group['id']}: {str(e)}")
+        
+        await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
+    else:
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
+@SACHIN8.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
+async def broadcast(event):
+    if event.sender_id == OWNER_ID:
+        reply = await event.get_reply_message()
+        message = event.pattern_match.group(1)
+
+        if not message and not reply:
+            await event.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ.")
+            return
+        
+        users = stats_collection.find({'type': 'user'})
+        groups = stats_collection.find({'type': 'group'})
+
+        user_count = 0
+        group_count = 0
+
+        for user in users:
+            try:
+                if reply:
+                    await SACHIN8.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
                     await SACHIN8.send_message(user['id'], message)
+                user_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is blocked
+            except Exception as e:
+                print(f"Error sending message to {user['id']}: {str(e)}")
+        
+        for group in groups:
+            try:
+                if reply:
+                    await SACHIN8.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
+                    await SACHIN8.send_message(user['id'], message)
+                group_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is removed from the group
+            except Exception as e:
+                print(f"Error sending message to {group['id']}: {str(e)}")
+        
+        await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
+    else:
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
+@SACHIN9.on(events.NewMessage(incoming=True, pattern=r"\%sbroadcast(?: |$)(.*)" % hl))
+async def broadcast(event):
+    if event.sender_id == OWNER_ID:
+        reply = await event.get_reply_message()
+        message = event.pattern_match.group(1)
+
+        if not message and not reply:
+            await event.reply("ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ʙʀᴏᴀᴅᴄᴀsᴛ ᴏʀ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ.")
+            return
+        
+        users = stats_collection.find({'type': 'user'})
+        groups = stats_collection.find({'type': 'group'})
+
+        user_count = 0
+        group_count = 0
+
+        for user in users:
+            try:
+                if reply:
+                    await SACHIN9.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
+                    await SACHIN9.send_message(user['id'], message)
+                user_count += 1
+            except ForbiddenError:
+                pass  # Ignore if the bot is blocked
+            except Exception as e:
+                print(f"Error sending message to {user['id']}: {str(e)}")
+        
+        for group in groups:
+            try:
+                if reply:
+                    await SACHIN9.send_message(user['id'], message or reply.text, file=reply.media)
+                else:
                     await SACHIN9.send_message(user['id'], message)
                 group_count += 1
             except ForbiddenError:
@@ -233,4 +613,7 @@ async def broadcast(event):
         
         await event.reply(f"ʙʀᴏᴀᴅᴄᴀsᴛ ʜᴀs ʙᴇᴇɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ.\n\nᴍᴇssᴀɢᴇ sᴇɴᴛ ᴛᴏ {user_count} ᴜsᴇʀs ᴀɴᴅ {group_count} ɢʀᴏᴜᴘs.")
     else:
-        await event.reply("ᴏɴʟʏ ᴊᴀʀᴠɪs ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        await event.reply("ᴏɴʟʏ sᴀᴄʜɪɴ ᴄᴀɴ ᴘᴇʀғᴏʀᴍ ᴛʜɪs ᴀᴄᴛɪᴏɴ.")
+        
+        
+        
