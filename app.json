@@ -1,5 +1,5 @@
 {
-    "name": "JARVIS",
+    "name": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
     "logo": "https://telegra.ph/file/83db3b7786ffa9948962b.jpg",
     "keywords": [
         "telegram",
@@ -8,40 +8,85 @@
         "PythonX",
         "SpamBots"
     ],
-    "repository": "https://github.com/doraemon890/Jarvis-X-spam",
+    "repository": "https://github.com/ITS-MY-EDIT/SACHINxADVANCE",
     "env": {
-        "BOT_TOKEN": {
-            "description": "Telegram Bot Token. Get this value from https://t.me/BotFather",
+        "BOT_TOKEN0": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN1": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN2": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN3": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN4": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN5": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN6": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN7": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN8": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN9": {
+            "description": "❖ | sᴧᴄʜɪɴ ꭙ sᴧɴᴧᴛᴧɴɪ | ❖",
             "value": "",
             "required": true
         },
         "CMD_HNDLR": {
-            "description": "Custom command handler.",
+            "description": "ᴄᴜsᴛᴏᴍ ᴄᴏᴍᴍᴀɴᴅ ʜᴀɴᴅʟᴇʀ.",
             "value": ".",
             "required": false
         },
         "SUDO_USERS": {
-            "description": "Sudo users' IDs, separated by spaces.",
+            "description": "sᴜᴅᴏ ᴜsᴇʀs ɪᴅs, sᴇᴘᴀʀᴀᴛᴇᴅ ʙʏ sᴘᴀᴄᴇs.",
             "value": "",
             "required": false
         },
         "OWNER_ID": {
-            "description": "Owner ID",
+            "description": "ᴏᴡɴᴇʀ ɪᴅ",
             "value": "",
             "required": true
         },
         "MONGO_DB_URI": {
-            "description": "Get a MongoDB URL from https://cloud.mongodb.com.",
+            "description": "ɢᴇᴛ ᴀ ᴍᴏɴɢᴏᴅʙ ᴜʀʟ ғʀᴏᴍ https://cloud.mongodb.com.",
             "value": "",
             "required": true
         },
         "HEROKU_API_KEY": {
-            "description": "Your Heroku API key to update your bot.",
+            "description": "ʏᴏᴜʀ ʜᴇʀᴏᴋᴜ ᴀᴘɪ ᴋᴇʏ ᴛᴏ ᴜᴘᴅᴀᴛᴇ ʏᴏᴜʀ ʙᴏᴛ.",
             "value": "",
             "required": false
         },
         "HEROKU_APP_NAME": {
-            "description": "Your app name to update your bot.",
+            "description": "ʏᴏᴜʀ ᴀᴘᴘ ɴᴀᴍᴇ ᴛᴏ ᴜᴘᴅᴀᴛᴇ ʏᴏᴜʀ ʙᴏᴛ.",
             "value": "",
             "required": false
         }
