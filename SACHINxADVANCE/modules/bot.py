@@ -306,7 +306,7 @@ async def manage_multiple_sudo_users(event):
 
 async def prompt_join_channels(event):
     buttons = [
-        [Button.url("ᴊᴀʀᴠɪs sᴜᴘᴘᴏʀᴛ", "https://t.me/ALL_SANATANI_BIT")],
+        [Button.url("ᴊᴀʀᴠɪs sᴜᴘᴘᴏʀᴛ", "https://t.me/ALL_SANATANI_BOT")],
         [Button.url("sᴜᴘᴘᴏʀᴛ ᴄʜᴀᴛ", "https://t.me/II_SANATANI_II")],
         [Button.inline("ᴠᴇʀɪғʏ ✅", b"verify_membership")]
     ]
