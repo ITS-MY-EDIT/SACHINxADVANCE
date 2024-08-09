@@ -1,6 +1,3 @@
-## Copy Paster Must Give Credit...
-## @JARVIS_V2
-
 import sys
 import heroku3
 from os import execl, getenv
@@ -29,9 +26,10 @@ async def ping(event):
         reply_message = await event.reply("❄️")
         end = datetime.now()
         ping_time = (end - start).microseconds / 1000
-        await reply_message.edit(f"[𝐉𝐀𝐑𝐕𝐈𝐒 𝐈𝐒 𝐑𝐄𝐀𝐃𝐘 𝐓𝐎 𝐅𝐔𝐂𝐊 𝐇𝐀𝐓𝐄𝐑𝐒 🥀](https://t.me/JARVIS_V_SUPPORT)🤖\n» `{ping_time} ᴍꜱ`")
+        await reply_message.edit(f"**┬─ ⋅ ⋅ ───── ᯽ ───── ⋅ ⋅ ─┬**\n**      ❖│sᴧɴᴧᴛᴧηɪ ꭙ sᴘᴧϻ│❖**\n**┼─ ⋅ ⋅ ───── ᯽ ───── ⋅ ⋅ ─┴**\n**│˹❄️˼ ᴘɪηɢ ᴘσηɢ :** `{ping_time} ϻs`\n**├──────────────────**\n**│˹⛈️˼ ʟᴧsᴛ ᴜᴘᴅᴧᴛᴇ :** `12:06:24`\n**├──────────────────**\n**│˹⚡˼ ʟɪᴠᴇ sᴛᴧᴛᴜs : ɪ ᴧᴍ ᴧʟɪᴠᴇ**\n**└──────────────────**")
     else:
         await prompt_join_channels(event)
+
 
 
 
@@ -56,20 +54,51 @@ async def ping(event):
 
 async def restart(event):
     if event.sender_id in SUDO_USERS:
-        await event.reply("`ʙᴏᴛ ɪs ʀᴇsᴛᴀʀᴛɪɴɢ ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ`")
+        await event.reply("**┬─ ⋅ ⋅ ───── ᯽ ───── ⋅ ⋅ ─┬**\n**      ❖│sᴧɴᴧᴛᴧηɪ ꭙ sᴘᴧϻ│❖**\n**┼─ ⋅ ⋅ ───── ᯽ ───── ⋅ ⋅ ─┴**\n**│˹🍃˼ ʀᴇʙᴏᴏᴛ ᴘʀᴏᴄᴇss sᴛᴀʀᴛ**\n**├──────────────────**\n**│˹🍀˼ ɪ'ᴍ ʙᴀᴄᴋ ɪɴ ᴛᴡᴏ ᴍɪɴᴜᴛᴇs**\n**├──────────────────**\n**│˹⚡˼ ʟɪᴠᴇ sᴛᴧᴛᴜs : ɪ ᴧᴍ ᴧʟɪᴠᴇ**\n**└──────────────────**")
         try:
-            await X1.disconnect()
+            await SACHIN0.disconnect()
         except Exception:
             pass
+        try:
+            await SACHIN1.disconnect()
+        except Exception:
+            pass
+        try:
+            await SACHIN2.disconnect()
+        except Exception:
+            pass
+        try:
+            await SACHIN3.disconnect()
+        except Exception:
+            pass
+        try:
+            await SACHIN4.disconnect()
+        except Exception:
+            pass
+        try:
+            await SACHIN5.disconnect()
+        except Exception:
+            pass
+        try:
+            await SACHIN6.disconnect()
+        except Exception:
+            pass
+        try:
+            await SACHIN7.disconnect()
+        except Exception:
+            pass
+        try:
+            await SACHIN8.disconnect()
+        except Exception:
+            pass
+        try:
+            await SACHIN9.disconnect()
+        except Exception:
+            pass
+
         execl(sys.executable, sys.executable, *sys.argv)
     else:
         await prompt_join_channels(event)
-
-
-
-
-
-
 
 
 
@@ -187,7 +216,7 @@ async def getsudo(event):
     if event.sender_id not in SUDO_USERS:
         for channel in REQUIRED_CHANNELS:
             try:
-                participants = await X1(GetParticipantsRequest(
+                participants = await SACHIN0(GetParticipantsRequest(
                     channel=channel,
                     filter=ChannelParticipantsSearch(''),
                     offset=0,
