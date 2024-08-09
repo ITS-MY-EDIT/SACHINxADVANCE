@@ -6,17 +6,23 @@ from config import SACHIN0, SACHIN1, SACHIN2, SACHIN3, SACHIN4, SACHIN5, SACHIN6
 
 # Constants
 START_BUTTON = [
-    [Button.inline("• ᴄᴏᴍᴍᴀɴᴅs •", data="help_back")],
     [
-        Button.url("• ᴄʜᴀɴɴᴇʟ •", "https://t.me/JARVIS_V_SUPPORT"),
-        Button.url("• sᴜᴘᴘᴏʀᴛ •", "https://t.me/Dora_Hub")
+        Button.url("🍁 sᴀᴄʜɪɴ", "https://t.me/V_VIP_OWNER"),
+        Button.url("ᴜsᴇʀʙᴏᴛ 🕸️", "https://t.me/SANATANI_X_ROBOT")
     ],
-    [Button.url("• ʀᴇᴘᴏ •", "https://github.com/doraemon890/SOLO-X-SPAM")]
+    [
+        Button.inline("🥀 ʜᴇʟᴘ ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs 🥀", data="help_back")
+    ],
+    [
+        Button.url("✨ ᴜᴘᴅᴀᴛᴇ", "https://t.me/All_SANATANI_BOT"),
+        Button.url("sᴜᴘᴘᴏʀᴛ ❄️", "https://t.me/+Ckzm2ypQyIIzZTll")
+    ],
+    [
+        Button.url("🌸 ᴊᴏɪɴ ғᴏʀ sᴜᴅᴏ 🌸", "https://t.me/+Ckzm2ypQyIIzZTll")
+    ],
 ]
 
-IMAGE_URL = "https://github.com/doraemon890/JARVIS-X-SPAM/assets/155803358/f30a5777-9823-45d0-9860-342eceadb774"
-PYTHON_VERSION = "3.11.3"
-JARVIS_VERSION = "M 1.8.31"
+IMAGE_URL = "https://telegra.ph//file/7cfeff721589b61a2f634.jpg"
 
 async def get_bot_info(event):
     ANNIE = await event.client.get_me()
@@ -26,14 +32,19 @@ async def get_bot_info(event):
 
 def create_start_text(bot_name, bot_id, sender_name, sender_id):
     return (
-        f"**ʜᴇʏ​ [{sender_name}](tg://user?id={sender_id}),\n\n"
-        f"ɪ ᴀᴍ [{bot_name}](tg://user?id={bot_id})​**\n"
-        "━━━━━━━━━━━━━━━━━━━\n\n"
-        f"» **ᴍʏ ᴅᴇᴠᴇʟᴏᴘᴇʀ​ : [JARVIS](https://t.me/JARVIS_V2)**\n\n"
-        f"» **ᴊᴀʀᴠɪs V2 :** `{JARVIS_VERSION}`\n"
-        f"» **ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{PYTHON_VERSION}`\n"
-        f"» **ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `{__version__}`\n"
-        "━━━━━━━━━━━━━━━━━"
+        f"**╭────── ˹ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ˼ ⏤͟͟͞͞‌‌‌‌★**\n"
+        f"**┆**\n"
+        f"**┊◍ ʜᴇʏ : [{sender_name}](tg://user?id={sender_id}) **\n"
+        f"**┆◍ ɪ ᴀᴍ : [{bot_name}](tg://user?id={bot_id}) **\n"
+        f"**┊**\n"
+        f"**┆● sᴀɴᴀᴛᴀɴɪ ʙᴏᴛ ᴠᴇʀsɪᴏɴ :** `0.2`\n"
+        f"**┊● ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ :** `8.2.5.1.01`\n"
+        f"**╰─────────────────────────**\n"
+        f"**──────────────────────────**\n"
+        f"**⦿ Oᴡɴᴇʀ - [🦋⃟‌🇸ʌᷟᴄᷣʜɪ֟፝η 🌸](https://t.me/v_vip_owner) | [🦋⃟‌🇸ʌᷟᴄᷣʜɪ֟፝η 🌸](https://t.me/sachin_owner) **\n"
+        f"**──────────────────────────**\n"
+        f"**    ❖ Uᴘᴅᴀᴛᴇ's ⏤͟͟͞͞‌‌‌‌ [❖ ∣ Sᴀɴᴀᴛᴀɴɪ Tᴇᴄʜ ∣ ❖](https://t.me/all_sanatani_bot) **\n"
+         "**──────────────────────────**"
     )
 
 @SACHIN0.on(events.NewMessage(pattern="/start"))
