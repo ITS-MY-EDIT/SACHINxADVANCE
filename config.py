@@ -30,7 +30,7 @@ BOT_TOKEN8 = getenv("BOT_TOKEN8", default="7246724288:AAEb7L8lwvsmD0rb7n7TF1X50c
 BOT_TOKEN9 = getenv("BOT_TOKEN9", default="7063268907:AAER728IwjbgTdGwWqk-eKeRDdTZOZxxDFU")
 
 
-SUDO_USERS = list(map(lambda x: int(x), getenv("SUDO_USERS", default="7381171860").split()))
+SUDO_USERS = list(map(lambda x: int(x), getenv("SUDO_USERS", default="5959548791").split()))
 for x in SACHIN:
     SUDO_USERS.append(x)
 OWNER_ID = int(getenv("OWNER_ID", default="5959548791"))
