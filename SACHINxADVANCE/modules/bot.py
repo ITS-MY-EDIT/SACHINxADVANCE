@@ -339,7 +339,7 @@ async def verify_membership(event):
 async def verify_membership(event):
     for channel in REQUIRED_CHANNELS:
         try:
-            participants = await X1(GetParticipantsRequest(
+            participants = await SACHIN0(GetParticipantsRequest(
                 channel=channel,
                 filter=ChannelParticipantsSearch(''),
                 offset=0,
